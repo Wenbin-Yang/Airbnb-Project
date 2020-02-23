@@ -1,12 +1,10 @@
 
 # Let's start by uploading the necessary CSV's into R and install any necessary packages. For this project the only package used was leaflet.
 
-listings <- read.csv("~/Desktop/denver_listings.csv",stringsAsFactors=FALSE)
-URL <- read.csv("~/Desktop/URLs.csv",stringsAsFactors=FALSE)
+listings <- read.csv("denver_listings.csv",stringsAsFactors=FALSE)
+URL <- read.csv("URLs.csv",stringsAsFactors=FALSE)
 
-
-
-# install.packages('leaflet')
+install.packages('leaflet')
 require('leaflet')
 
 # This step isn't exactly needed but I made a copy of the dataset just in case:
@@ -209,7 +207,6 @@ for (i in 1:length(zDATA$review_scores_rating)){
 	}
 }
 
-
 # The code below is the official leaflet structure. We want to add tiles based on the zNIGHT variable (this is a judgement call, it can be weekly_price too with some alteration to the code above). The addAwesomeMarkers will require a longitude and a latitude, which has been taken from our zDATA. The icon variable = icons from the code above. To add a popup, which we have done, you'll need to do "popup = " and can put as many or as little things as possible. 
 
 # The format for the pop up, as you can see, is some sort of text label (Neighbourhood: "), the data where you want it to come from (zDATA$neighbourhood), and "<br>" at the end followed by commas for each variable you want to include. If you want to include a link, as I did, the write up is slightly different.
@@ -241,4 +238,7 @@ summary(lm(price~bedrooms+bathrooms,data=lakeDATA))
 
 PRICE = 19.974 +  51.106*(4) + 24.784*(2)
 PRICE = #$273.97/night
+
+
+
 
