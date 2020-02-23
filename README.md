@@ -15,5 +15,6 @@ I downloaded all available data on Denver’s Airbnb market on April 27th , 2019
 2) denver_listings.csv
 
 3) dever_reviews.csv
+CSVs link can be get here: https://drive.google.com/drive/folders/1nePm-QUf2SLguGilAGNe0E9TM_2mN-z7?usp=sharing
 
 There does not seem to be documentation for all the variable fields (although maybe you can find it!), but most are pretty self-explanatory.
